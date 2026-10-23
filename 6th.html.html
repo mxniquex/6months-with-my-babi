@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>from my eyes to yours, langga</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'courier', cursive;
+      color: white;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    video#bgvid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: 120%;
+      height: 120%;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      opacity: 0.85;
+      background-size: cover;
+      filter: blur(1px) brightness(0.9);
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      overflow-y: auto;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    ol {
+      list-style: decimal inside;
+      line-height: 1.8;
+      font-size: 1.2rem;
+    }
+    audio {
+  width: 100%;
+  max-width: 400px;
+  height: 25px;
+  margin-top: 1rem;
+  margin-bottom: 0.005rem;
+  border-radius: 9px;
+  opacity: 0.7
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+    }
+    .footer {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 2rem;
+    }.letter-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+.letter-button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.letter-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1.5rem;
+  border-radius: 20px;
+  z-index: 10;
+  color: light pink;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  display: none;
+  white-space: pre-line;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  font-family: 'helvetica', serif;
+}
+
+.letter-modal.show {
+  display: block;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+}
+  </style>
+li {
+  margin-bottom: 2rem;
+  padding-right: 1rem;
+  word-break: break-word;
+}
+</head>
+<body>
+  <video autoplay muted loop id="bgvid">
+    <source src="6th.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+<button id="toggleLetter">a lil something for you 💌</button><div id="letterModal" class="letter-modal">
+  <p>
+    I know it has been alot for us in the past couple weeks,
+allow me to give you a little something...despite our distance
+
+for My Palangga —
+
+First of all, I just wanna say thank you for EVERYTHING.
+From being patient with me to literally spending $$$ on me.
+I know I can be alot but you still chose to be with me.
+Thank you for giving me the courage to try something new, to explore new things and places, and to live rather than just survive.
+No words can truly describe how much I love you and how much I cherish you.
+You mean the world to me, my babi.
+There's no one else I'd rather spend the good days and the bad days with but you.
+
+So thank you, for bringing light into my life.
+And I hope the world is kind enough to let us be together until the sun stop shining.
+I love you so much my babi, you are my everything.
+Palangga kaayo tika <3
+
+To more seconds, months, years, & decades together. To eternity!
+
+love,  
+ur monicakes-pangga-asawa
+
+  </p>
+</div>
+    <h1>from my eyes to yours, my love💌</h1>
+    <ol>
+      <li>
+        A Night to Remember – beabadoobee & Laufey
+        <audio controls>
+          <source src="songs/01-A Night to Remember.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+       Always – Daniel Caesar
+        <audio controls>
+          <source src="songs/02-Always.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+        4me 4me – Malcolm Todd
+        <audio controls>
+          <source src="songs/03-4me4me.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+        ONLY – Lee Hi
+        <audio controls>
+          <source src="songs/04-ONLY.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+        Last Night on Earth – Green Day
+        <audio controls>
+          <source src="songs/05-LNoE.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+        Roommates – Malcolm Todd
+        <audio controls>
+          <source src="songs/06-Roommates.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+        Words Are Worthless – Sleep Theory
+        <audio controls>
+          <source src="songs/07-WAW.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+      <li>
+        Helena – My Chemical Romance
+        <audio controls>
+          <source src="songs/08-Helena.mp3" type="audio/mpeg">
+        </audio>
+      </li>
+    </ol>
+    <div class="footer">
+      <p>mixtape: from ur palangga <3</p>
+    </div>
+    <p>
+  </p>
+</div>
+<script>
+  const toggleBtn = document.getElementById('toggleLetter');
+  const modal = document.getElementById('letterModal');
+
+  toggleBtn.addEventListener('click', () => {
+    modal.classList.toggle('show');
+  });
+</script>
+</body>
+</html>
